@@ -1,3 +1,5 @@
+#!/bin/bash
+
 BRANCH=$1
 
 if [ ! -d "$DEPLOYMENT_FOLDER/.git" ]; then
