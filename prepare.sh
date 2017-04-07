@@ -1,3 +1,5 @@
+BRANCH=$1
+
 if [ ! -d "$DEPLOYMENT_FOLDER/.git" ]; then
     if [ ! -d "$DEPLOYMENT_FOLDER" ]; then
         mkdir "$DEPLOYMENT_FOLDER"
@@ -8,3 +10,6 @@ if [ ! -d "$DEPLOYMENT_FOLDER/.git" ]; then
     git pull origin master
     cd -
 fi
+
+git clean -xdf
+git checkout $BRANCH --force
