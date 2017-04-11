@@ -9,7 +9,7 @@ if [ ! -d "$DEPLOYMENT_FOLDER/.git" ]; then
     cd "$DEPLOYMENT_FOLDER"
     git init
     git remote add origin https://$DEPLOYMENT_USER:$DEPLOYMENT_PASSWORD@$DEPLOYMENT_URL
-    git pull origin master
+    git fetch origin
     cd -
 fi
 
