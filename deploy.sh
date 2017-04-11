@@ -1,12 +1,14 @@
 #!/bin/bash
 
-BRANCH=$1
+ENVIRONMENT=$1
 VERSION=`git describe --always`
 
-cd $DEPLOY_FOLDER
+echo "Deploying version $VERSION to $ENVIRONMENT"
+
+cd $DEPLOYMENT_FOLDER
 
 git add -A
 git commit -m "Commit $VERSION - Build as of `date`"
-git push origin $BRANCH
+git push $ENVIRONMENT master
 
 cd -
