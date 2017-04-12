@@ -20,4 +20,4 @@ git config --global user.name "Mr. Build Server"
 - Do post-build stuff
 - Promote from one environment to the next with `./promote.sh qa prod`
 
-More on that [here](https://www.feval.ca/posts/deploy-to-azure-with-codeship/)
+More on that [here](https://www.feval.ca/posts/deploy-azure-git/)
